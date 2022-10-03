@@ -55,6 +55,13 @@ const airlineData = {
 };
 
 app.get("/:route/:airline", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+
   const { route, airline } = req.params;
 
   if (!airlineData.hasOwnProperty(route)) {
