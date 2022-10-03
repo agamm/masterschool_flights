@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const cors = require("cors");
 
 app.get("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.send(`Welcome to Agam's Airline price API!
   To get a price for an airline send a GET request to:
   /:airline result will be in JSON. All prices are in USD.`);
@@ -55,6 +56,7 @@ const airlineData = {
 };
 
 app.get("/:route/:airline", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const { route, airline } = req.params;
 
   if (!airlineData.hasOwnProperty(route)) {
