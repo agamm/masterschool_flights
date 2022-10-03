@@ -14,6 +14,8 @@ const url = "https://flyapi.onrender.com";
   const firstP = document.createElement("p");
   const secondP = document.createElement("p");
   const thirdP = document.createElement("p");
+  const h1 = document.createElement("h1");
+  h1.textContent = "KLM Airline";
 
   firstP.textContent = `Lisbon to Newyork costs ${data_lisnyc.price} dollars`;
   secondP.textContent = `TelAviv to Berlin costs ${data_tlvber.price} dollars`;
@@ -22,4 +24,5 @@ const url = "https://flyapi.onrender.com";
   klm.append(firstP);
   klm.append(secondP);
   klm.append(thirdP);
+  klm.append(h1);
 })();
