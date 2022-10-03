@@ -21,8 +21,8 @@ const url = "https://flyapi.onrender.com";
   secondP.textContent = `TelAviv to Berlin costs ${data_tlvber.price} dollars`;
   thirdP.textContent = `Stockholm to London costs ${data_arnlhr.price} dollars`;
 
+  klm.append(h1);
   klm.append(firstP);
   klm.append(secondP);
   klm.append(thirdP);
-  klm.append(h1);
 })();
