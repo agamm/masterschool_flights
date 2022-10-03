@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
-const cors = require("cors");
 
 app.get("/", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -70,12 +69,6 @@ app.get("/:route/:airline", (req, res) => {
   data.price = Math.round(Math.random() * 800 + 99);
   res.json(data);
 });
-
-app.use(
-  cors({
-    origin: "*",
-  })
-);
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
