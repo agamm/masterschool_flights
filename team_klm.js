@@ -1,4 +1,3 @@
-// Fetch all routes for the airline and insert into #klm
 const url = "https://flyapi.onrender.com";
 
 (async function () {
@@ -16,9 +15,9 @@ const url = "https://flyapi.onrender.com";
   const secondP = document.createElement("p");
   const thirdP = document.createElement("p");
 
-  firstP.textContent = `Lisbon to Newyork costs ${data_lisnyc.price} dollar`;
-  secondP.textContent = data_tlvber.price;
-  thirdP.textContent = data_arnlhr.price;
+  firstP.textContent = `Lisbon to Newyork costs ${data_lisnyc.price} dollars`;
+  secondP.textContent = `TelAviv to Berlin costs ${data_tlvber.price} dollars`;
+  thirdP.textContent = `Stockholm to London costs ${data_arnlhr.price} dollars`;
 
   klm.append(firstP);
   klm.append(secondP);
