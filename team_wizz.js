@@ -10,15 +10,24 @@
   const lisNyc = await thirdFlight.json();
 
   const wizzContainer = document.getElementById("wizz");
-  wizzHeader.textContent = "Wizz";
 
   const wizzHeader = document.createElement("h2");
+  wizzHeader.textContent = "Wizz";
+
   const pricesParagraph = document.createElement("p");
 
   pricesParagraph.innerHTML = `Telaviv to Berlin price is $${tlvBer.price} <br>`;
   pricesParagraph.innerHTML += `Stockholm to London price is $${arnLhr.price} <br>`;
   pricesParagraph.innerHTML += `Lisburn to  New York price is $${lisNyc.price} <br>`;
 
+  // logo img
+  const logoImg = document.createElement("img");
+  logoImg.setAttribute("src", "https://logo.clearbit.com/wizzair.com");
+  logoImg.setAttribute("alt", "Wizz Logo");
+  logoImg.style.width = "100px";
+  logoImg.style.height = "100px";
+
+  wizzContainer.append(logoImg);
   wizzContainer.append(wizzHeader);
   wizzContainer.append(pricesParagraph);
 })();
